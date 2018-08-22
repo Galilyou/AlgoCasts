@@ -6,9 +6,7 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
-  if (str.length <= 1) return str;
-
+function cavemanReverese(str) {
   let ret = '';
 
   for (let i = str.length - 1; i >= 0; i--) {
@@ -16,6 +14,27 @@ function reverse(str) {
   }
 
   return ret;
+}
+
+function cavemanWithForOfLoops(str) {
+  let ret = '';
+
+  for (const char of str) {
+    ret = char + ret;
+  }
+
+  return ret;
+}
+
+function reverseViaLib(str) {
+  return str
+    .split('') // turns it to array
+    .reverse() // reverses the array
+    .join(''); // joins up the array into one string
+}
+
+function reverse(str) {
+  return cavemanWithForOfLoops(str);
 }
 
 module.exports = reverse;
