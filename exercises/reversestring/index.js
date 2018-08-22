@@ -26,6 +26,10 @@ function cavemanWithForOfLoops(str) {
   return ret;
 }
 
+function cavemanWithReduce(str) {
+  return str.split('').reduce((acc, char) => char + acc, '');
+}
+
 function reverseViaLib(str) {
   return str
     .split('') // turns it to array
@@ -34,7 +38,7 @@ function reverseViaLib(str) {
 }
 
 function reverse(str) {
-  return cavemanWithForOfLoops(str);
+  return cavemanWithReduce(str);
 }
 
 module.exports = reverse;
